@@ -6,7 +6,7 @@ let assertEqual = function(actual, expected) {
   }
 };
 
-//TEST
 
-assertEqual(false, 0);
-assertEqual(12, 12);
+
+// assertEqual(false, 0);
+// assertEqual(12, 12);
