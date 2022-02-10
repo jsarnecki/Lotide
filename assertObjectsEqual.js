@@ -12,13 +12,13 @@ const assertObjectsEqual = function(actual, expected) {
             return false;
           }
         } else if (actual[key2] !== expected[key2]) {
-            console.log(`🛑 Assertion Failed: ${inspect(actual[key1])} !== ${inspect(expected[key2])}`);
-            return false;
+          console.log(`🛑 Assertion Failed: ${inspect(actual[key1])} !== ${inspect(expected[key2])}`);
+          return false;
         }
       }
     }
   }
-  console.log(`✅ Assertion Passed: ${actual} === ${expected}`);
+  console.log(`✅ Assertion Passed: ${inspect(actual)} === ${inspect(expected)}`);
   return true;
 };
 
@@ -45,7 +45,7 @@ console.log("cd/dc:", assertObjectsEqual(cd, dc), true); // => true
 
 const ab = {a: 5, b: [1, "fun", "4"], c: "string", d: [5, 4]};
 const ba = {c: "string", b: [1, "fun", "4"], a: 5, d: [4, 5]};
-console.log("ab/ba:", assertObjectsEqual(ab, ba), false); //
+console.log("ab/ba:", assertObjectsEqual(ab, ba), false); // => false
 
 const cd2 = { c: "1", d: ["2", 3, 4]};
 console.log("cd/dc:", assertObjectsEqual(cd, cd2), false); // => false
